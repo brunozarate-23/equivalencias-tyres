@@ -13,7 +13,7 @@ function diametro() {
 
 async function equivalencias(diametro) {
     try {
-        const response = await fetch('./db/diametros.json');
+        const response = await fetch('./db/diametros.json', , { mode: 'cors' });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
