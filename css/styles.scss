@@ -1,8 +1,69 @@
-$navcolor : #090C74;
-$primaryfont : #ffffff;
+$primarycolor : #14213D;
+$secondarycolor : #FCA311;
+$black : #000000;
+$darkgrey : #E5E5E5;
+$lightgrey : #F2F2F2;
+$white : #FFFFFF;
 
-.bz-maintitle {
-    text-decoration: none;
-    font-size: larger;
-    color: #000000;
+.bz-navbar {
+    background-color: $primarycolor;
+    .bz-logo {
+        max-height: 40px;
+        margin-right: 1rem;
+    }
+    .bz-navtext {
+        color: $white;
+    }
+}
+
+@media (min-width: 578px) {
+    .bz-form {
+        margin-top: 1rem;
+        background-color: $darkgrey;
+        border: 1px solid $darkgrey;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 5px $lightgrey;
+        .bz-maintitle {
+            color: $black;
+            font-size: large;
+            justify-self: center;
+            padding-top: 10px;
+        }
+        .bz-inputs {
+            align-content: center;
+
+            .bz-formItems {
+                background-color: $lightgrey;
+                color: $black;
+            }
+
+            .bz-clear {
+                padding: auto;
+                margin-left: 10px;
+                background-color: #ff000000;
+                color: #ff0000;
+                border: 1px solid #ff0000;
+            }
+            .bz-clear:hover {
+                background-color: #ff0000;
+                color: $white;
+            }
+
+            .bz-calcular {
+                padding: auto;
+                margin-left: 10px;
+                background-color: $primarycolor;
+                color: $white;
+            }
+            .bz-calcular:hover {
+                color: $primarycolor;
+                background-color: $secondarycolor;
+                border: 1px solid $primarycolor;
+            }
+        }
+}
+}
+
+.bz-ad {
+    max-width: 200px;
 }

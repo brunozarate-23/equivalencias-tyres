@@ -6,12 +6,12 @@ function diametro() {
     var rodado = Number(document.getElementById("inputRodado").value);
 
     var diametro = 2 * (ancho * (aspecto / 100)) + (rodado * 25.4);
-    
-    // Call the async function properly
-    equivalencias(diametro);
+
+    document.getElementById("diametro").textContent = "El diametro ingresado es " + diametro;
+    equivalencias(diametro, rodado);
 }
 
-async function equivalencias(diametro) {
+async function equivalencias(diametro, rodado) {
     try {
         const response = await fetch('./db/diametros.json', { mode: 'cors' });
 
@@ -25,7 +25,7 @@ async function equivalencias(diametro) {
         const upperLimit = diametro * 1.015;
 
         const equivalencias = jsonDiametros.filter(item =>
-            item.diametro >= lowerLimit && item.diametro <= upperLimit
+            item.diametro >= lowerLimit && item.diametro <= upperLimit && item.diametro !== diametro && item.rodado == rodado
         );
 
         console.log(equivalencias);
@@ -38,16 +38,16 @@ async function equivalencias(diametro) {
 
 function displayResults(items) {
     const resultDiv = document.getElementById("results");
-    resultDiv.innerHTML = ""; // Clear previous results
+    resultDiv.innerHTML = "";
 
     if (items.length === 0) {
-        resultDiv.innerHTML = "<p>No equivalent diameters found.</p>";
+        resultDiv.innerHTML = "<p>No se poseen equivalencias en este momento.</p>";
         return;
     }
 
     items.forEach(item => {
         const p = document.createElement("p");
-        p.textContent = `${item.producto}: ${item.diametro}`;
+        p.textContent = `Cod: ${item.cod} - ${item.marca} - ${item.producto}`;
         resultDiv.appendChild(p);
     });
 }
