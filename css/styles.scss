@@ -22,7 +22,7 @@ $white : #FFFFFF;
         background-color: $darkgrey;
         border: 1px solid $darkgrey;
         border-radius: 5px;
-        box-shadow: 0 0 10px 5px $lightgrey;
+        box-shadow: 0 0 5px 2px $lightgrey;
         .bz-maintitle {
             color: $black;
             font-size: large;
@@ -63,7 +63,22 @@ $white : #FFFFFF;
         }
 }
 }
-
+.bz-titleResults {
+    font-size:x-large;
+    color: $black;
+}
+.bz-card {
+    width: 100%;
+    height: 15%;
+    border: 1px solid $darkgrey;
+    background-color: $lightgrey;
+    justify-content: center;
+    align-items: center;    
+        #diametro {
+            font-size: medium;
+            color: $black;
+        }
+}
 .bz-ad {
-    max-width: 200px;
+    max-width: 100%;
 }

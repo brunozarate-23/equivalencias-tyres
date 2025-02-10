@@ -46,8 +46,23 @@ function displayResults(items) {
     }
 
     items.forEach(item => {
-        const p = document.createElement("p");
-        p.textContent = `Cod: ${item.cod} - ${item.marca} - ${item.producto}`;
-        resultDiv.appendChild(p);
+        const tr = document.createElement("tr"); // Crea una fila de tabla
+        
+        // Creo la data de cada fila con su respectivos valores
+        const tdCod = document.createElement("td");
+        tdCod.textContent = `${item.cod}`;
+
+        const tdMarca = document.createElement("td");
+        tdMarca.textContent = `${item.marca}`;
+
+        const tdDescripcion = document.createElement("td");
+        tdDescripcion.textContent = `${item.producto}`;
+        
+        //Agregar esta data a cada fila en la tabla
+        tr.appendChild(tdCod);
+        tr.appendChild(tdMarca);
+        tr.appendChild(tdDescripcion);
+
+        resultDiv.appendChild(tr);
     });
 }

@@ -61,17 +61,43 @@
         </div>
       </div>
       <div>
-        <section class="container bz-resultados">
-          <div class="row">
-            <h2 class="bz-maintitle">Resultados</h2>
-            <div id="diametro"> </div>
-          </div>
+        <section class="container mt-3 bz-resultados">
           <div class="row">
             <div class="col-12 col-md-9">
-              <div class="form-control" id="results" disabled></div>
+              <h2 class="bz-titleResults text-center">Neumaticos Equivalentes</h2>
+              <div class="card bz-card">
+                <div class="card-body">
+                  <p id="diametro"></p>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Descripcion</th>
+                  </tr>
+                </thead>
+                <tbody id="results"></tbody>
+              </table>
             </div>
             <div class="col-md-3 d-none d-md-block">
-              <img class="img-fluid float-end bz-ad" src="./img/ad.png" alt="">
+              <span class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="img-fluid float-end bz-ad" src="./img/ad.png" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="img-fluid bz-ad" src="./img/ad2.png" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="img-fluid bz-ad" src="./img/ad3.png" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="img-fluid bz-ad" src="./img/ad4.png" alt="">
+                  </div>
+                </div>
+              </span>
             </div>
           </div>
         </section>
