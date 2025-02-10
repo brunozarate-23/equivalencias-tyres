@@ -62,10 +62,16 @@ $white : #FFFFFF;
             }
         }
 }
-}
 .bz-titleResults {
     font-size:x-large;
-    color: $black;
+    color: #FCA311;
+    background-color: $primarycolor;
+    border-radius: 5px;
+    padding: 5px;
+}
+.bz-table {
+    margin-top: 10px;
+}
 }
 .bz-card {
     width: 100%;
