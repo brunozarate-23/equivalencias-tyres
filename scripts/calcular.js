@@ -57,11 +57,15 @@ function displayResults(items) {
 
         const tdDescripcion = document.createElement("td");
         tdDescripcion.textContent = `${item.producto}`;
+
+        const tdDiametro = document.createElement("td");
+        tdDiametro.textContent = `${item.diametro}`;
         
         //Agregar esta data a cada fila en la tabla
         tr.appendChild(tdCod);
         tr.appendChild(tdMarca);
         tr.appendChild(tdDescripcion);
+        tr.appendChild(tdDiametro);
 
         resultDiv.appendChild(tr);
     });

@@ -63,53 +63,6 @@
     margin-top: 10px;
   }
 }
-@media (max-width: 577px) {
-  .navbar-toggler {
-    border-color: #FFFFFF;
-  }
-  .navbar-toggler .navbar-toggler-icon {
-    filter: invert(100%);
-  }
-  .bz-form {
-    background-color: #E5E5E5;
-  }
-  .bz-form .bz-maintitle {
-    font-size: medium;
-    color: #000000;
-    justify-self: center;
-    padding-top: 10px;
-  }
-  .bz-form .bz-inputs {
-    margin: auto;
-    max-width: 60%;
-  }
-  .bz-form .bz-inputs .bz-formItems {
-    background-color: #F2F2F2;
-    color: #000000;
-  }
-  .bz-form .bz-inputs .bz-calcular {
-    padding: auto;
-    margin-left: 10px;
-    background-color: #14213D;
-    color: #FFFFFF;
-  }
-  .bz-form .bz-inputs .bz-calcular:active {
-    color: #14213D;
-    background-color: #FCA311;
-    border: 1px solid #14213D;
-  }
-  .bz-form .bz-inputs .bz-clear {
-    padding: auto;
-    margin-left: 10px;
-    background-color: rgba(255, 0, 0, 0);
-    color: #ff0000;
-    border: 1px solid #ff0000;
-  }
-  .bz-form .bz-inputs .bz-clear:active {
-    background-color: #ff0000;
-    color: #FFFFFF;
-  }
-}
 .bz-card {
   width: 100%;
   height: 15%;
@@ -127,4 +80,4 @@
   max-width: 100%;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.cs.map */
